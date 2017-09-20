@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -32,7 +33,7 @@
     <div class="container">
       <div class="row">
               <!--LOGO-->
-              <div class="span3"><a class="brand" href="#"><img src="Template/Fontend/img/logo.png"/></a></div>
+              <div class="span3"><a class="brand" href="Homeforward"><img src="Template/Fontend/img/logo.jpg" height = "100px" width = "100px"/></a></div>
               <!-- /LOGO -->
 
             <!-- MAIN NAVIGATION -->  
@@ -42,21 +43,10 @@
                     <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
                     <div class="nav-collapse collapse navbar-responsive-collapse">
                     <ul class="nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        
-                        <li class="dropdown">
-                          <a href="about.html" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                  <li><a href="about.html">Company</a></li>
-                                  <li><a href="about.html">History</a></li>
-                                  <li><a href="about.html">Team</a></li>
-                            </ul>
-
-                        </li>
-
-                        <li><a href="service.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                      
+                      
+                        <li><a href="blog.html">Log-in</a></li>
+                        <li><a href="contact.html">Sin-in</a></li>
                  
                     </ul>
                   </div>
@@ -88,14 +78,14 @@
               <div class="span6">
 
                 <div class="carousel-caption">
-                      <h1>Example headline</h1>
+                      <h1>German Dog</h1>
                       <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                      <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+                      <a class="btn btn-large btn-primary" href="#">Buy now</a>
                 </div>
 
               </div>
 
-                <div class="span6"> <img src="Template/Fontend/img/slide/slide1.jpg"></div>
+                <div class="span6"> <img src="Template/Fontend/img/slide/slide 1.jpg" height = "350px" width = "300px"></div>
 
           </div>
         </div>
@@ -105,6 +95,7 @@
 
       </div>
 
+<c:forEach items="${listslidebanner}" var = "list">
       <div class="item">
        
         <div class="container">
@@ -113,14 +104,14 @@
               <div class="span6">
 
                 <div class="carousel-caption">
-                      <h1>Example headline</h1>
-                      <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <h1>${list.slidename}</h1>
+                      <p class="lead">${list.slidecontent}</p>
                       <a class="btn btn-large btn-primary" href="#">Sign up today</a>
                 </div>
 
               </div>
 
-                <div class="span6"> <img src="Template/Fontend/img/slide/slide2.jpg"></div>
+                <div class="span6"> <img src="Template/Fontend/img/slide/${list.slideimage}" height = "350px" width = "300px"></div>
 
           </div>
         </div>
@@ -129,7 +120,7 @@
 
 
 
-
+</c:forEach>
 
     </div>
        <!-- Carousel nav -->
