@@ -4,25 +4,83 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login Page</title>
+<title>Register page</title>
 
-		
-
-		<link rel="stylesheet" href="Template/Backend/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="Template/Backend/assets/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="Template/Backend/assets/font-awesome/4.5.0/css/font-awesome.min.css" />
-
-		
-		<link rel="stylesheet" href="Template/Backend/assets/css/fonts.googleapis.com.css" />
-
-		
-		<link rel="stylesheet" href="Template/Backend/assets/css/ace.min.css" />
-
-	
+		<link rel="stylesheet" href="Template/Backend/assets/css/fonts.googleapis.com.css" />		
+		<link rel="stylesheet" href="Template/Backend/assets/css/ace.min.css" />	
 		<link rel="stylesheet" href="Template/Backend/assets/css/ace-rtl.min.css" />
 		
-
+		<script type="text/javascript">
+		
+				function Validate()
+				{
+					var name = document.myform.name.value;
+					var membername = document.myform.membername.value;
+					var memberpass = document.myform.memberpass.value;
+					//
+					if (name == "")
+					{
+						document.getElementById("errorname").innerHTML ="You must input your  full name here";
+						
+					}
+					
+					else
+						{
+							document.getElementById("errorname").innerHTML ="";
+							
+						}
+						
+					//
+					if (membername == "")
+					{
+						document.getElementById("errormembername").innerHTML ="You must input your user name here";
+						
+					}
+					
+					else
+						{
+							document.getElementById("errormembername").innerHTML ="";
+							
+						}
+						
+					
+					//
+					if(memberpass == "")
+						{
+							document.getElementById("errormemberpass").innerHTML ="Please input your password";
+							
+						}
+						
+					
+					else
+						{
+						
+							document.getElementById("errormemberpass").innerHTML ="";
+							
+						}
+						/*
+							document.getElementById("errorpass").innerHTML ="";
+							
+							if(password.length <=6)
+								{
+									document.getElementById("errorpass").innerHTML ="";
+								}
+							
+							if(password.length <=6)
+							{
+								document.getElementById("errorpass").innerHTML ="";
+							}
+							
+						}
+					*/
+				}
+				
+		</script>
+		
+		
 </head>
-
 
 <body  class="login-layout">
 
@@ -45,30 +103,57 @@
 							<div class="space-6"></div>
 
 							<div class="position-relative">
-								<div id="login-box" class="login-box visible widget-box no-border">
+								
+								
+
+							<div id="login-box" class="login-box visible widget-box no-border">
 									<div class="widget-body">
 										<div class="widget-main">
 											<h4 class="header blue lighter bigger">
 												<i class="ace-icon fa fa-coffee green"></i>
-												Please Enter Your Information
+												Create new account
 											</h4>
 
 											<div class="space-6"></div>
 
-											<form>
+											<form name="myform"  action="Registercontroller" method="POST" onsubmit="Validate()">
 												<fieldset>
+												
+													<label class="block clearfix" style="color:red">
+														<%=request.getAttribute("msgregister") != null?request.getAttribute("msgregister"):" " %>
+													</label>
+												
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" class="form-control" placeholder="Full name" name="name"/>
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
-
+													
+													<label class="block clearfix" id="errorname">
+														
+													</label>
+													
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="text" class="form-control" placeholder="Username" name="membername"/>
+															<i class="ace-icon fa fa-user"></i>
+														</span>
+													</label>
+													
+													<label class="block clearfix" id="errormembername">
+														
+													</label>
+													
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control" placeholder="Password" name="memberpass"/>
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
+													</label>
+													
+													<label class="block clearfix" id="errormemberpass">
+														
 													</label>
 
 													<div class="space"></div>
@@ -76,9 +161,9 @@
 													<div class="clearfix">
 														
 
-														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+														<button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
 															<i class="ace-icon fa fa-key"></i>
-															<span class="bigger-110">Login</span>
+															<span class="bigger-110">Register</span>
 														</button>
 													</div>
 
@@ -101,16 +186,13 @@
 												</a>
 											</div>
 
-											<div>
-												<a href="#" data-target="#signup-box" class="user-signup-link">
-													I want to register
-													<i class="ace-icon fa fa-arrow-right"></i>
-												</a>
-											</div>
+											
 										</div>
 									</div><!-- /.widget-body -->
 								</div><!-- /.login-box -->
-							</div><!-- /.position-relative -->
+							
+							
+							
 
 							<div class="navbar-fixed-top align-right">
 								<br />
@@ -189,4 +271,5 @@
 			});
 		</script>
 </body>
+
 </html>
