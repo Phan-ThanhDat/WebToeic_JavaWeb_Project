@@ -20,62 +20,27 @@
 					var membername = document.myform.membername.value;
 					var memberpass = document.myform.memberpass.value;
 					//
-					if (name == "")
+					if (name == "" || membername =="" || memberpass =="")
 					{
-						document.getElementById("errorname").innerHTML ="You must input your  full name here";
+						alert("please input here ");
 						
-					}
+						return false;						
+					}	
 					
-					else
+					else	
 						{
-							document.getElementById("errorname").innerHTML ="";
-							
-						}
-						
-					//
-					if (membername == "")
-					{
-						document.getElementById("errormembername").innerHTML ="You must input your user name here";
-						
-					}
-					
-					else
-						{
-							document.getElementById("errormembername").innerHTML ="";
-							
-						}
-						
-					
-					//
-					if(memberpass == "")
-						{
-							document.getElementById("errormemberpass").innerHTML ="Please input your password";
-							
-						}
-						
-					
-					else
-						{
-						
-							document.getElementById("errormemberpass").innerHTML ="";
-							
-						}
-						/*
-							document.getElementById("errorpass").innerHTML ="";
-							
-							if(password.length <=6)
-								{
-									document.getElementById("errorpass").innerHTML ="";
-								}
-							
-							if(password.length <=6)
+							if(memberpass.length <= 6)
 							{
-								document.getElementById("errorpass").innerHTML ="";
+								document.getElementId("errorpass").innerHTML="the length of password has to be more than 6 words";
+								return false;
 							}
 							
 						}
-					*/
+							
+								
 				}
+				
+				
 				
 		</script>
 		
@@ -116,7 +81,7 @@
 
 											<div class="space-6"></div>
 
-											<form name="myform"  action="Registercontroller" method="POST" onsubmit="Validate()">
+											<form name="myform"  action="Registercontroller" method="POST" onsubmit="return Validate()">
 												<fieldset>
 												
 													<label class="block clearfix" style="color:red">
@@ -130,9 +95,7 @@
 														</span>
 													</label>
 													
-													<label class="block clearfix" id="errorname">
-														
-													</label>
+													
 													
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
@@ -141,18 +104,17 @@
 														</span>
 													</label>
 													
-													<label class="block clearfix" id="errormembername">
-														
-													</label>
+													
 													
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" name="memberpass"/>
+															<input type="password" class="form-control" placeholder="Password" name="memberpass" onkeyup="return Validate()"/>
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
 													
-													<label class="block clearfix" id="errormemberpass">
+														
+													<label class="block clearfix" id="errorpass">
 														
 													</label>
 
@@ -186,7 +148,12 @@
 												</a>
 											</div>
 
-											
+											<div>
+												<a href="Loginforward"  class="forgot-password-link">
+													<i class="ace-icon fa fa-arrow-left"></i>
+													Log in
+												</a>
+											</div>
 										</div>
 									</div><!-- /.widget-body -->
 								</div><!-- /.login-box -->

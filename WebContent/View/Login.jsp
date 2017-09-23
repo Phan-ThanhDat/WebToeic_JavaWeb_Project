@@ -102,8 +102,8 @@
 											</div>
 
 											<div>
-												<a href="#" data-target="#signup-box" class="user-signup-link">
-													I want to register
+												<a href="Registerforward" class="user-signup-link">
+													Register
 													<i class="ace-icon fa fa-arrow-right"></i>
 												</a>
 											</div>
