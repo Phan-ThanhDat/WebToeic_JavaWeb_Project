@@ -28,36 +28,9 @@
 </head>
 <body>
 
-<!--HEADER ROW-->
-  <div id="header-row">
-    <div class="container">
-      <div class="row">
-              <!--LOGO-->
-              <div class="span3"><a class="brand" href="Homeforward"><img src="Template/Fontend/img/logo.jpg" height = "100px" width = "100px"/></a></div>
-              <!-- /LOGO -->
-
-            <!-- MAIN NAVIGATION -->  
-              <div class="span9">
-                <div class="navbar  pull-right">
-                  <div class="navbar-inner">
-                    <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
-                    <div class="nav-collapse collapse navbar-responsive-collapse">
-                    <ul class="nav">
-                      
-                      
-                        <li><a href="Loginforward">Log-in</a></li>
-                        <li><a href="Registerforward">Sin-in</a></li>
-                 
-                    </ul>
-                  </div>
-
-                  </div>
-                </div>
-              </div>
-            <!-- MAIN NAVIGATION -->  
-      </div>
-    </div>
-  </div>
+  <!-- /HEADER ROW -->
+  		<jsp:include page="Header.jsp"></jsp:include>
+  
   <!-- /HEADER ROW -->
 
   
@@ -204,24 +177,7 @@
 <!--Footer
 ==========================-->
 
-<footer>
-    <div class="container">
-      <div class="row">
-        <div class="span6">Copyright &copy 2013 Shapebootstrap | All Rights Reserved  <br>
-        <small>Aliquam tincidunt mauris eu risus.</small>
-        </div>
-        <div class="span6">
-            <div class="social pull-right">
-                <a href="#"><img src="Template/Fontend/img/social/googleplus.png" alt=""></a>
-                <a href="#"><img src="Template/Fontend/img/social/dribbble.png" alt=""></a>
-                <a href="#"><img src="Template/Fontend/img/social/twitter.png" alt=""></a>
-                <a href="#"><img src="Template/Fontend/img/social/dribbble.png" alt=""></a>
-                <a href="#"><img src="Template/Fontend/img/social/rss.png" alt=""></a>
-            </div>
-        </div>
-      </div>
-    </div>
-</footer>
+<jsp:include page="Footer.jsp"></jsp:include>
 
 <!--/.Footer-->
 

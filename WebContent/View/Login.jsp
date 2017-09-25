@@ -55,18 +55,23 @@
 
 											<div class="space-6"></div>
 
-											<form>
+											<form action="Logincontroller" method ="POST">
 												<fieldset>
+												
+												<label class="block clearfix" style="color:red">
+														<%=request.getAttribute("msglogin") != null?request.getAttribute("msglogin"):" " %>
+													</label>
+												
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" class="form-control" placeholder=" Your Username" name ="membername"/>
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" class="form-control" placeholder="Password" name="memberpass"/>
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
@@ -76,7 +81,7 @@
 													<div class="clearfix">
 														
 
-														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+														<button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
 															<i class="ace-icon fa fa-key"></i>
 															<span class="bigger-110">Login</span>
 														</button>
