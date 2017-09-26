@@ -58,7 +58,7 @@ else
               <!-- /LOGO -->
 
             <!-- MAIN NAVIGATION -->  
-              <div class="span9">
+              <div class="span9" style="z-index: 10000 !important;">
                 <div class="navbar  pull-right">
                   <div class="navbar-inner">
                     <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>

@@ -41,7 +41,7 @@
   <!--Carousel
   ==================================================-->
 
-  <div id="myCarousel" class="carousel slide">
+  <div id="myCarousel" class="carousel slide" style="z-index: 0 !important ; background-color: #f5f5f5; margin-top:120px">
     <div class="carousel-inner">
 
       <div class="active item">
@@ -67,6 +67,8 @@
 
 
       </div>
+
+
 
 <c:forEach items="${listslidebanner}" var = "list">
       <div class="item">
