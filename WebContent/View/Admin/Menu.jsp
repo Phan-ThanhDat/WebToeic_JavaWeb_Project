@@ -55,7 +55,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="Grammarguidelinemanage" >
+								<a href="Listgrammarguidelinemanage" >
 									<i class="menu-icon fa fa-caret-right"></i>
 
 									Grammar
