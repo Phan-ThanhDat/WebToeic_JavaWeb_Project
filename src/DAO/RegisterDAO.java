@@ -15,7 +15,7 @@ public class RegisterDAO {
 		//create preparedstatement
 		PreparedStatement pttm = null;
 		// truyền truy vấn sql cho đối tượng preqaredstatement
-		String sql = "insert into member(name,membername,memberpass,Categorymemberid) value(?,?,?,?)" ;
+		String sql = "insert into member(name,membername,memberpass,Categorymemberid) values(?,?,?,?)" ;
 		try 
 		{
 			pttm = conn.prepareStatement(sql);
@@ -47,5 +47,5 @@ public class RegisterDAO {
 			
 		}
 		return false;
-}
+	}
 }

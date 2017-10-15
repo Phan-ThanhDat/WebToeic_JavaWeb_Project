@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//WebContent/View/Admin/Insertgrammarguidelineimage.jsp=UTF-8
 encoding//WebContent/View/Admin/Listgrammarguidelinemanage.jsp=UTF-8
+encoding//src/DAO/GrammarguidelinemanageDAO.java=UTF-8
 encoding//src/DAO/LoginDAO.java=UTF-8
 encoding//src/DAO/RegisterDAO.java=UTF-8

@@ -534,6 +534,9 @@
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
+    <form action="Insertgrammarguidelinename" method="POST">
+    
+    
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
@@ -542,18 +545,18 @@
         </div>
         <div class="modal-body">
           <div class="col-sm-9">
-				<input type="text" id="form-field-1-1" placeholder="Text Field" class="form-control" />
+				<input type="text" id="form-field-1-1" placeholder="Input grammar lessons" class="form-control" name ="grammarname" />
 				
 			</div>
         </div>
         <div class="modal-footer">
-         <button class="btn btn-info" type="button">
-							<i class="ace-icon fa fa-check bigger-110"></i>
-												Submit
+         <button class="btn btn-info" type="submit">
+					<i class="ace-icon fa fa-check bigger-110"></i>
+						Submit
 				</button>
         </div>
       </div>
-      
+      </form>
     </div>
   </div>
 		

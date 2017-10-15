@@ -63,7 +63,7 @@ public class Logincontroller extends HttpServlet {
 			{
 				HttpSession session = request.getSession(true);
 				
-				
+				//session
 				session.setAttribute("sessionuser",name);
 				RequestDispatcher rd = request.getRequestDispatcher("Homeforward");
 				rd.forward(request, response);
@@ -73,7 +73,7 @@ public class Logincontroller extends HttpServlet {
 				{
 					HttpSession session = request.getSession(true);
 					
-					
+					//session
 					session.setAttribute("sessionadmin",name);
 					RequestDispatcher rd = request.getRequestDispatcher("Adminforward");
 					rd.forward(request, response);
